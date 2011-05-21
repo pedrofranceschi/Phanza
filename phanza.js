@@ -56,7 +56,7 @@ function simulateMovement() {
     $("#charts").show();
     
     // Configure the values of the initial point and the final point in the highway marks
-    $("#highway_marks #initial_position").text(initialPosition + "m");
+    // $("#highway_marks #initial_position").text(initialPosition + "m");
     $("#highway_marks #final_position").text(finalPosition + "m");
     
     // Declare movement loop variables
@@ -113,12 +113,6 @@ function simulateMovement() {
         });
         lastPosition = position;
     }
-    
-    // if(graphicCounter != 0) {
-    //     // If the movement is irregular, the last second will be lost in the chart
-    //     positionsInTime.push(roundFloat(finalPosition, 2));
-    //     velocitiesInTime.push(roundFloat(calculateCarVelocity(initialVelocity, acceleration, i), 2));
-    // }
     
     renderPositionGraphic(positionsInTime);
     renderVelocityGraphic(velocitiesInTime);
