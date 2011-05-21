@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<script src="jquery.min.js"></script>
+		<script src="phanza.js"></script>
+		<script src="highcharts.js"></script>
+		<link rel=stylesheet href="stylesheet.css"/>
+		<title>Phanza</title>
+	</head>
+	<body>
+		<div align="center">Phanza Software by pH (Pedro Henrique Cavallieri Franceschi) - iBlogeek.com - 2006-2011 (C) - All Rights Reserved - @pedroh96 - pedrohfranceschi@gmail.com</div>
+		<div id="content_view">
+			<div id="simulation_view">
+				<div id="car_object">
+					<div id="object_values">
+						0 m
+					</div>
+					<img src="car.png" id="car"><br/>
+				</div>
+				<div id="highway"></div>
+				<div id="highway_marks">
+					<span id="initial_position" class="points">0m</span>
+					<span id="final_position" class="points">500m</span>
+				</div>
+			</div>
+			<div id="informations_view">				
+				<div id="inputs">
+					<b><u>Entrada de valores:</b></u><br/><br/>
+					
+					Ponto inicial (S0) (m): <input type="text" size="3" id="initial_position" class="integer_input"><br/><br/>
+					Ponto final (S) (m): <input type="text" size="3" id="final_position" class="integer_input"><br/><br/>
+					Velocidade inicial (V0) (m/s): <input type="text" size="3" id="initial_velocity" class="integer_input"><br/><br/>
+					Aceleração (A) (m/s²): <input type="text" size="3" id="acceleration" class="integer_input"><br/><br/>
+					
+					<input type="button" onclick="simulateMovement();" value="Simular movimento">
+				</div>
+				
+				<div id="calculations" style="display:none;">
+					<div align="center"><b><u>Cálculos:</b></u><br/><br/></div>
+					
+					<div id="math">
+						<b>Velocidade: Progressão Aritmética</b><br/><br/>
+						
+						An = A1 * q^n-1<br/><br/>
+						
+						<span id="black_border">
+							An = <span id="initial_velocity"></span> * <span id="acceleration"></span>^n-1
+						</span>
+						<br/><br/><br/>
+						
+						<b>Posição: Progressão Aritmética</b><br/>
+						(de segunda ordem ou não)<br/><br/>
+						
+						<span id="black_border">
+							Sequência: (<span id="ap_1"></span>, <span id="ap_2"></span>, <span id="ap_3"></span>, ...)
+						</span>
+						<br/><br/>
+						Razão é a velocidade.<br/>
+						Cada índice representa um segundo.
+					</div>
+					
+					<div id="physics">
+						<b>Função horária do espaço:</b><br/><br/>
+					
+						S = S0 + (V0 + a*t)t<br/><br/>
+						<span id="black_border">
+							S = <span id="initial_position"></span> + (<span id="initial_velocity"></span> + <span id="acceleration"></span>*t)t
+						</span>
+					</div>
+					
+				</div>
+				
+				<div id="charts" style="display:none;">
+					<b><u><a href="javascript:toggleGraphics();">Gráficos</a></u></b>
+					<br/><br/>
+					<div id="charts_toggle" style="display:none;">
+						<div id="position_over_time" class="chart">
+							asd
+						</div>
+						<br/>
+						<div id="velocity_over_time" class="chart">
+							asd
+						</div>
+					</div>
+				</div>
+				
+				<br/>
+				
+			</div>
+		</div>
+	</body>
+</html>

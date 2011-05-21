@@ -1,0 +1,86 @@
+#content_view {
+    background-color:#FFF;
+    width:900px;
+    margin: 0 auto;
+}
+
+#car {
+    width:75px;
+    height:37px;
+}
+
+#car_object #object_values {
+    margin-top:-15px;
+    position:absolute;
+    font-size:13px;
+    font-weight:bold;
+    width:60px;
+    height:20px;
+    text-align:center;
+    line-height:13px;
+}
+
+#simulation_view {
+    margin-top:50px;
+    width:900px;
+    height:80px;
+}
+
+#simulation_view #highway_marks {
+    margin-top:2px;
+}
+
+#highway_marks #initial_position {
+    margin-left:13px;
+}
+
+#highway_marks #final_position {
+    float:right;
+    margin-right:12px;
+}
+
+#highway {
+    background-color:#000;
+    height:8px;
+    width:875px;
+    margin:0 auto;
+    margin-top:-5px;
+}
+
+#inputs {
+    width:250px;
+    float:left;
+}
+
+.integer_input {
+    float:right;
+}
+
+#calculations #physics {
+    float:right;
+    text-align:right;
+}
+
+#calculations #math {
+    margin-left:75px;
+    float:left;
+}
+
+#black_border {
+    padding:5px;
+    border:1px solid #000;
+}
+
+#charts {
+    margin: 0 auto;
+    margin-top:285px;
+    position: absolute;
+    text-align:center;
+    width:875px;
+}
+
+.chart {
+    width:875px;
+    height:400px;
+    margin:10px;
+}
