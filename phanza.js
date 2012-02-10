@@ -34,19 +34,9 @@ function simulateMovement() {
     $("#math #initial_velocity").text(initialVelocity);
     $("#math #acceleration").text(acceleration);
     $("#math #ap_1").text(initialPosition);
-    
-    if(acceleration == 0) {
-        $("#math #ap_2").text(initialPosition + initialVelocity);
-        $("#math #ap_3").text(initialPosition + (2*initialVelocity));
-    } else {
-        var geometryInitialPosition = initialPosition;
-        if(initialPosition == 0) {
-            geometryInitialPosition = 1;
-        }
-        
-        $("#math #ap_2").text(roundFloat(geometryInitialPosition * (initialVelocity*acceleration), 3));
-        $("#math #ap_3").text(roundFloat(geometryInitialPosition * 2 * (initialVelocity*acceleration), 3));
-    }
+
+	$("#math #ap_2").text(roundFloat(calculateCarPosition(initialPosition, initialVelocity, 1, acceleration), 3));
+	$("#math #ap_3").text(roundFloat(calculateCarPosition(initialPosition, initialVelocity, 2, acceleration), 3));
     
     $("#physics #initial_position").text(initialPosition);
     $("#physics #initial_velocity").text(initialVelocity);
